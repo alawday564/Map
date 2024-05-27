@@ -13,15 +13,15 @@
     <!-- fonts.googleapis.com -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12.72,100.900&display=swap">
 
-    <link rel="stylesheet" href="../css/floor1.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
         <div class="inner_header">
-            <a class="logo" href="../index.html">
-                <img src="../imgs/logo.png" alt="logo" width="90" height="40">
+            <a class="logo" href="/index.html">
+                <img src="/imgs/logo.png" alt="logo" width="90" height="40">
                 BẢN ĐỒ
             </a>
             <input type="checkbox" id="nav_check" hidden>
@@ -63,22 +63,22 @@
     <div class="box_location">
         <div class="dropdown">
             <div class="select">
-                <span class="selected">Vị trí hiện tại</span>
-                <div class="caret"></div>
+                <!-- <span class="selected">Vị trí hiện tại</span> -->
+                <select class="form-control" name="diemDen" id="diemDen">
+                    <option value="Vị trí hiện tại">Vị trí hiện tại</option>
+                    <option value="Khoa khám bệnh" @(selectedDiemDen == "Khoa khám bệnh" ? "selected" : "")>Khoa khám bệnh</option>
+                    <option value="Khu lấy mẫu xét nghiệm" @(selectedDiemDen == "Khu lấy mẫu xét nghiệm" ? "selected" : "")>Khu lấy mẫu xét nghiệm</option>
+                    <option value="Khu khám dịch vụ" @(selectedDiemDen == "Khu khám dịch vụ" ? "selected" : "")>Khu khám dịch vụ</option>
+                    <option value="Quầy hướng dẫn" @(selectedDiemDen == "Quầy hướng dẫn" ? "selected" : "")>Quầy hướng dẫn</option>
+                    <option value="Khoa chăm sóc giảm nhẹ" @(selectedDiemDen == "Khoa chăm sóc giảm nhẹ" ? "selected" : "")>Khoa chăm sóc giảm nhẹ</option>
+                    <option value="Khu siêu âm" @(selectedDiemDen == "Khu siêu âm" ? "selected" : "")>Khu siêu âm</option>
+                    <option value="Khoa chẩn đoán hình ảnh" @(selectedDiemDen == "Khoa chẩn đoán hình ảnh" ? "selected" : "")>Khoa chẩn đoán hình ảnh</option>
+                    <option value="Khoa cấp cứu" @(selectedDiemDen == "Khoa cấp cứu" ? "selected" : "")>Khoa cấp cứu</option>
+                    <option value="Quầy tiếp nhận" @(selectedDiemDen == "Quầy tiếp nhận" ? "selected" : "")>Quầy tiếp nhận</option>
+                    <option value="Quầy thu ngân" @(selectedDiemDen == "Quầy thu ngân" ? "selected" : "")>Quầy thu ngân</option>
+                    <option value="Quầy thông tin" @(selectedDiemDen == "Quầy thông tin" ? "selected" : "")>Quầy thông tin</option>
+                </select>
             </div>
-            <ul class="menu">
-                <li class="active">--Khoa khám bệnh--</li>
-                <li>--Khu lấy mẫu xét nghiệm--</li>
-                <li>--Khu khám dịch vụ--</li>
-                <li>--Quầy hướng dẫn--</li>
-                <li>--Khoa chăm sóc giảm nhẹ--</li>
-                <li>--Khu siêu âm--</li>
-                <li>--Khoa chẩn đoán hình ảnh--</li>
-                <li>--Khoa cấp cứu--</li>
-                <li>--Quầy tiếp nhận--</li>
-                <li>--Quầy thu ngân--</li>
-                <li>--Quầy thông tin--</li>
-            </ul>
         </div>
 
         <div class="icon">
@@ -87,32 +87,32 @@
 
         <div class="dropdown">
             <div class="select">
-                <span class="selected">Vị trí muốn đến</span>
-                <div class="caret"></div>
+                <!-- <span class="selected">Vị trí muốn đến</span>-->
+                <select class="form-control" name="diemDen" id="diemDen">
+                    <option value="Vị trí muốn đến">Vị trí muốn đến</option>
+                    <option value="Khoa khám bệnh" @(selectedDiemDen == "Khoa khám bệnh" ? "selected" : "")>Khoa khám bệnh</option>
+                    <option value="Khu lấy mẫu xét nghiệm" @(selectedDiemDen == "Khu lấy mẫu xét nghiệm" ? "selected" : "")>Khu lấy mẫu xét nghiệm</option>
+                    <option value="Khu khám dịch vụ" @(selectedDiemDen == "Khu khám dịch vụ" ? "selected" : "")>Khu khám dịch vụ</option>
+                    <option value="Quầy hướng dẫn" @(selectedDiemDen == "Quầy hướng dẫn" ? "selected" : "")>Quầy hướng dẫn</option>
+                    <option value="Khoa chăm sóc giảm nhẹ" @(selectedDiemDen == "Khoa chăm sóc giảm nhẹ" ? "selected" : "")>Khoa chăm sóc giảm nhẹ</option>
+                    <option value="Khu siêu âm" @(selectedDiemDen == "Khu siêu âm" ? "selected" : "")>Khu siêu âm</option>
+                    <option value="Khoa chẩn đoán hình ảnh" @(selectedDiemDen == "Khoa chẩn đoán hình ảnh" ? "selected" : "")>Khoa chẩn đoán hình ảnh</option>
+                    <option value="Khoa cấp cứu" @(selectedDiemDen == "Khoa cấp cứu" ? "selected" : "")>Khoa cấp cứu</option>
+                    <option value="Quầy tiếp nhận" @(selectedDiemDen == "Quầy tiếp nhận" ? "selected" : "")>Quầy tiếp nhận</option>
+                    <option value="Quầy thu ngân" @(selectedDiemDen == "Quầy thu ngân" ? "selected" : "")>Quầy thu ngân</option>
+                    <option value="Quầy thông tin" @(selectedDiemDen == "Quầy thông tin" ? "selected" : "")>Quầy thông tin</option>
+                </select>
             </div>
-            <ul class="menu">
-                <li class="active">--Khoa khám bệnh--</li>
-                <li>--Khu lấy mẫu xét nghiệm--</li>
-                <li>--Khu khám dịch vụ--</li>
-                <li>--Quầy hướng dẫn--</li>
-                <li>--Khoa chăm sóc giảm nhẹ--</li>
-                <li>--Khu siêu âm--</li>
-                <li>--Khoa chẩn đoán hình ảnh--</li>
-                <li>--Khoa cấp cứu--</li>
-                <li>--Quầy tiếp nhận--</li>
-                <li>--Quầy thu ngân--</li>
-                <li>--Quầy thông tin--</li>
-            </ul>
         </div>
-        <button>Tìm kiếm</button>
-    </div>
+
+        <button type="submit">Tìm kiếm</button>
 
     <!-- ------------------------------------------------- -->
     <!-- Code mới nè + update CSS floor1 luôn -->
     <!-- ------------------------------------------------- -->
     <article>
         <div class="imgs_floor1">
-            <img src="../imgs/floor/MAP_1.png" alt="">
+            <img src="/imgs/floor/MAP_1.png" alt="">
         </div>
     </article>
 
@@ -181,15 +181,15 @@
                     <p>Quầy thông tin</p>
                 </div>
                 <div class="box_3">
-                    <img src="../imgs/note/WC.png" width="25" height="25" alt="">
+                    <img src="/imgs/note/WC.png" width="25" height="25" alt="">
                     <p>Nhà vệ sinh</p>
                 </div>
                 <div class="box_3">
-                    <img src="../imgs/note/ThangMay.png" width="25" height="25" alt="">
+                    <img src="/imgs/note/ThangMay.png" width="25" height="25" alt="">
                     <p>Thang máy</p>
                 </div>
                 <div class="box_3">
-                    <img src="../imgs/note/ThangBo.png" width="25" height="25" alt="">
+                    <img src="/imgs/note/ThangBo.png" width="25" height="25" alt="">
                     <p>Thang bộ</p>
                 </div>
             </ul>
@@ -200,7 +200,6 @@
     <!-- ------------------------------------------------- -->
 
     <footer>
-        <div class="googlemap"></div>
         <div class="profile">   
             <div class="address">
                 <h2>Địa chỉ:</h2>
@@ -224,6 +223,6 @@
         <i class='bx bx-arrow-to-top' ></i>
     </span>
 
-    <script src="../js/floor1.js"></script>
+    <script src="/js/floor1.js"></script>
 </body>
 </html>
